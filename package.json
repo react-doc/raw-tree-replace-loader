@@ -1,0 +1,22 @@
+{
+  "name": "raw-tree-replace-loader",
+  "version": "1.0.0",
+  "description": "raw tree replace loader module for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Kenny Wang @jaywcjlove"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-doc/raw-tree-replace-loader.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "directory-tree-md": "^2.0.7",
+    "loader-utils": "^1.1.0"
+  }
+}
