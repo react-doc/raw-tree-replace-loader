@@ -31,9 +31,10 @@ module.exports = {
               include: /rdoc\.tree\.data\.json$/, // 检查包含的文件名字
               extensions: /\.md/,
               directoryTrees: { // 指定目录生成目录树，json
-                dir: cmd.markdownDirs,
+                dir: ['/path/to/dir'],
                 mdconf: true,
                 extensions: /\.md/,
+                relativePath: true, // 获取相对目录, dir 参数替换，路径的前部分
               }
             }
           }
