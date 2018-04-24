@@ -44,3 +44,34 @@ module.exports = {
   }
 }
 ```
+
+### In Webpack 4 
+
+```diff
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.json$/,
+        // Disable Webpack 4 Native JSON Loader
++        type: 'javascript/auto',
+        use: [
+          {
+            loader: require.resolve('raw-tree-replace-loader'),
+            options: {
+              include: /rdoc\.tree\.data\.json$/, // 检查包含的文件名字
+              extensions: /\.md/,
+              directoryTrees: { // 指定目录生成目录树，json
+                dir: ['/path/to/dir'],
+                mdconf: true,
+                extensions: /\.md/,
+                relativePath: true, // 获取相对目录, dir 参数替换，路径的前部分
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+```
